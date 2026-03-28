@@ -3,80 +3,91 @@ import Layout from "../layouts/Layout.astro";
 
 const proyectos = [
   {
-    titulo: "Transformación Digital: ERP finca exportadora de rosas",
+    titulo: "ERP Finca Exportadora de Rosas",
+    subtitulo: "Transformación Digital de Extremo a Extremo",
     descripcion:
-      "Arquitectura y desarrollo de una plataforma centralizada que digitalizó la cadena de suministro de una finca de rosas, eliminando procesos manuales críticos.",
+      "Arquitectura y desarrollo de una plataforma centralizada que digitalizó la cadena de suministro, eliminando procesos manuales críticos y centralizando la operación.",
     logros: [
       {
         icono: "⏱️",
         texto:
-          "Reducción del 90% en el tiempo par ala obtención de la información desde el área productiva hasta oficina central.",
+          "Reducción del 90% en latencia de información desde campo a oficina central.",
       },
       {
         icono: "📊",
         texto:
-          "Visibilidad en tiempo real del 100% del stock en inventarios, avances en producción de los pedidos, control de calidad y trazabilidad de rosas.",
+          "Visibilidad 100% en tiempo real de inventarios, producción y trazabilidad.",
       },
       {
         icono: "📉",
         texto:
-          "Disminución de mermas mediante el monitoreo predictivo de temperaturas, para facilitar la toma de decisiones gerenciales.",
+          "Disminución de mermas mediante monitoreo predictivo de temperaturas.",
       },
       {
         icono: "👥",
         texto:
-          "Reducción de personal en un 60% gracias a la automatización y cálculos hechos en el sistema para los procesos aprovechando esa mano de obra en otras áreas, y evitando errores en cálculos manuales por el personal operativo.",
+          "Optimización del 60% del personal operativo mediante automatización de cálculos.",
       },
     ],
     tags: ["Laravel", "Vue.js 3", "MySQL", "Arquitectura de Software"],
-    link: "#",
   },
 ];
 
 const skills = [
   {
     categoria: "Backend",
-    tecnologias: ["PHP", "Laravel", "CodeIgniter", "MySQL", "API REST"],
+    tecnologias: [
+      "PHP",
+      "Laravel",
+      "CodeIgniter",
+      "MySQL",
+      "API REST",
+      "Node.js",
+    ],
   },
   {
     categoria: "Frontend",
     tecnologias: [
-      "JavaScript",
+      "JavaScript (ES6+)",
       "Vue.js",
       "Astro",
       "Tailwind CSS",
       "Bootstrap",
-      "Node.js",
+      "Vuetify",
     ],
   },
-  { categoria: "Herramientas", tecnologias: ["Git", "Docker"] },
+  {
+    categoria: "Infraestructura",
+    tecnologias: ["Git", "Docker"],
+  },
 ];
 ---
 
-<Layout title="Haroldo Hernández | Analista Programador">
+<Layout>
   <section
-    class="min-h-[85vh] flex flex-col justify-center items-center text-center px-6 pt-10 pb-8 relative overflow-hidden"
+    class="min-h-[90vh] flex flex-col justify-center items-center text-center px-6 relative overflow-hidden py-10"
   >
-    <div class="relative group mb-10 animate-fade-in-down">
+    <div class="relative mb-7 animate-fade-in-down group">
       <div
-        class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full blur-xl opacity-30 group-hover:opacity-70 transition duration-1000 group-hover:duration-200"
+        class="absolute -inset-4 bg-gradient-to-r from-blue-600 via-emerald-500 to-blue-600 rounded-full blur-3xl opacity-40 group-hover:opacity-80 group-hover:blur-2xl transition-all duration-1000 ease-in-out"
       >
       </div>
 
       <div
-        class="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-gray-950 ring-4 ring-gray-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+        class="relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-white/10 ring-8 ring-white/5 shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]"
       >
         <img
           src="/Foto.jpeg"
-          alt="Haroldo Hernández"
-          class="w-full h-full object-cover object-top scale-100 group-hover:scale-110 transition-transform duration-700"
+          alt="Haroldo Hernández - Analista Programador"
+          class="w-full h-full object-cover object-top"
           loading="eager"
+          fetchpriority="high"
         />
       </div>
     </div>
 
     <h1
-      class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight text-white animate-fade-in"
+      class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-white animate-fade-in"
     >
       Hola, soy <span
         class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400"
@@ -85,255 +96,217 @@ const skills = [
     </h1>
 
     <p
-      class="text-gray-400 text-base md:text-lg max-w-xl mb-10 leading-relaxed animate-fade-in opacity-90"
+      class="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed animate-fade-in [animation-delay:200ms]"
     >
-      Analista Programador especializado en automatización de procesos y
-      desarrollo de soluciones corporativas con <span
-        class="text-gray-200 font-medium">PHP y JavaScript</span
+      Analista Programador enfocado en automatización de procesosy soluciones
+      corporativas escalables con
+      <span class="text-white font-medium"
+        >PHP, Laravel y ecosistemas modernos de JavaScript</span
       >.
     </p>
 
-    <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up">
+    <div
+      class="flex flex-col sm:flex-row gap-5 animate-fade-in-up [animation-delay:400ms]"
+    >
       <a
         href="#proyectos"
-        class="relative inline-flex items-center justify-center bg-blue-600 px-8 py-3 rounded-full font-semibold overflow-hidden group transition-all duration-300 hover:ring-4 hover:ring-blue-500/30 text-white text-sm"
+        class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-2xl font-bold transition-all hover:shadow-lg hover:shadow-blue-500/25 active:scale-95"
       >
-        <span
-          class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-64 group-hover:h-64 opacity-10"
-        ></span>
-        <span class="relative">Ver Impacto</span>
+        Ver Casos de Éxito
       </a>
       <a
-        href="/cv-haroldo.pdf"
+        href="/CV_Haroldo_Hernández.pdf"
         target="_blank"
-        class="border border-gray-700 hover:bg-gray-800 text-gray-400 hover:text-white px-8 py-3 rounded-full font-semibold transition-all active:scale-95 text-sm"
+        class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-2xl font-bold transition-all active:scale-95"
       >
-        Descargar CV
+        Ver CV
       </a>
     </div>
   </section>
 
-  <main class="max-w-5xl mx-auto px-6 space-y-32 pb-20">
+  <main class="max-w-6xl mx-auto px-6 space-y-32 pb-32">
     <section
       id="sobre-mi"
-      class="reveal grid md:grid-cols-3 gap-8 items-center"
+      class="reveal grid md:grid-cols-3 gap-10 items-center"
     >
-      <div
-        class="md:col-span-2 bg-gray-800/20 p-8 rounded-3xl border border-gray-800/50 backdrop-blur-sm relative overflow-hidden group"
-      >
-        <div
-          class="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform"
-        >
-          <svg
-            width="100"
-            height="100"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg
-          >
-        </div>
-        <h2 class="text-2xl font-bold mb-4 text-blue-400">Sobre mí</h2>
-        <p
-          class="text-gray-300 leading-relaxed italic border-l-4 border-blue-500 pl-4 mb-4"
-        >
-          "Mi enfoque es simple: si un proceso se repite más de tres veces, debe
-          ser automatizado."
+      <div class="md:col-span-2 space-y-6">
+        <h2 class="text-3xl font-bold text-blue-400 flex items-center gap-3">
+          <span class="h-px w-8 bg-blue-500"></span> Sobre mí
+        </h2>
+        <p class="text-2xl text-gray-200 font-light italic leading-relaxed">
+          "Mi enfoque es simple: si un proceso se repite más de tres veces, <span
+            class="text-blue-400 font-semibold underline decoration-blue-500/30"
+            >debe ser automatizado</span
+          >."
         </p>
-        <p class="text-gray-400">
-          Con más de 3 años de experiencia, me especializo en transformar
-          problemas operativos complejos en herramientas digitales eficientes
-          que facilitan la toma de decisiones basada en datos.
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Con más de 3 años de trayectoria, me especializo en transformar
+          cuellos de botella operativos en herramientas digitales de alto
+          rendimiento. Mi fuerte es la integración de sistemas y la creación de
+          reportes predictivos para la toma de decisiones gerenciales.
         </p>
       </div>
       <div
-        class="bg-gradient-to-br from-blue-600/10 to-emerald-600/10 p-8 rounded-3xl border border-blue-500/20 text-center hover:border-blue-500/40 transition-colors"
+        class="bg-gradient-to-br from-blue-600/10 to-emerald-600/5 p-10 rounded-[3rem] border border-blue-500/20 text-center shadow-inner"
       >
-        <span
-          class="text-6xl font-black text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-          >+3</span
-        >
+        <span class="text-7xl font-black text-white">+3</span>
         <p
-          class="text-xs text-gray-400 uppercase tracking-widest mt-3 font-bold"
+          class="text-blue-400 uppercase tracking-widest text-sm font-bold mt-4"
         >
-          Años de trayectoria
+          Años de Trayectoria
         </p>
       </div>
     </section>
 
-    <section id="proyectos" class="reveal py-12">
-      <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 text-white">
-        Impacto y Resultados <div
-          class="h-px bg-gradient-to-r from-gray-800 to-transparent flex-1"
-        >
+    <section id="proyectos" class="reveal">
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4"
+      >
+        <div>
+          <h2 class="text-4xl font-bold text-white mb-2">
+            Impacto y Resultados
+          </h2>
+          <p class="text-gray-500">
+            Soluciones que generan valor real al negocio.
+          </p>
         </div>
-      </h2>
+      </div>
 
-      {
-        proyectos.map((p) => (
-          <div class="group relative bg-gray-800/10 border border-gray-800/50 rounded-[2.5rem] p-8 md:p-12 hover:bg-gray-800/20 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-[2.5rem]" />
+      <div class="space-y-12">
+        {
+          proyectos.map((p) => (
+            <div class="group relative bg-white/[0.02] border border-white/5 rounded-[3rem] p-8 md:p-16 hover:bg-white/[0.04] transition-all duration-500 shadow-2xl overflow-hidden">
+              <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-blue-500/5 blur-[80px] rounded-full group-hover:bg-blue-500/10 transition-colors" />
 
-            <div class="relative z-10 grid md:grid-cols-5 gap-12">
-              <div class="md:col-span-2">
-                <span class="text-blue-500 font-mono text-xs uppercase tracking-[0.2em] font-bold">
-                  Caso de Éxito
-                </span>
-                <h3 class="text-3xl font-bold text-white mt-3 mb-5 group-hover:text-blue-400 transition-colors">
-                  {p.titulo}
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-8">
-                  {p.descripcion}
-                </p>
-                <div class="flex gap-2 flex-wrap">
-                  {p.tags.map((tag) => (
-                    <span class="text-[10px] uppercase font-bold px-4 py-1.5 bg-gray-950 text-blue-300 rounded-full border border-blue-500/10 group-hover:border-blue-500/30 transition-all">
-                      {tag}
-                    </span>
+              <div class="relative z-10 grid lg:grid-cols-2 gap-16">
+                <div class="space-y-6">
+                  <span class="inline-block px-4 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest">
+                    Caso de Éxito Corporativo
+                  </span>
+                  <h3 class="text-4xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                    {p.titulo}
+                  </h3>
+                  <p class="text-gray-400 text-lg leading-relaxed">
+                    {p.descripcion}
+                  </p>
+                  <div class="flex flex-wrap gap-3">
+                    {p.tags.map((tag) => (
+                      <span class="px-4 py-2 bg-gray-950 text-blue-300 text-xs font-medium rounded-xl border border-white/5 group-hover:border-blue-500/30 transition-all">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                  {p.logros.map((logro) => (
+                    <div class="p-6 rounded-2xl bg-gray-950/50 border border-white/5 hover:border-emerald-500/30 transition-all group/item">
+                      <div class="text-3xl mb-4 group-hover/item:scale-110 transition-transform">
+                        {logro.icono}
+                      </div>
+                      <p class="text-gray-300 text-sm leading-snug">
+                        {logro.texto}
+                      </p>
+                    </div>
                   ))}
                 </div>
               </div>
-
-              <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {p.logros.map((logro) => (
-                  <div class="bg-gray-950/40 backdrop-blur-md p-6 rounded-2xl border border-gray-800 group/item hover:border-emerald-500/30 transition-all">
-                    <div class="text-3xl mb-3 transform group-hover/item:scale-125 group-hover/item:rotate-12 transition-transform duration-300">
-                      {logro.icono}
-                    </div>
-                    <p class="text-gray-300 text-sm leading-snug font-medium">
-                      {logro.texto}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </section>
 
-    <section id="experiencia" class="reveal py-12">
-      <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 text-white">
-        Experiencia Profesional <div
-          class="h-px bg-gradient-to-r from-gray-800 to-transparent flex-1"
-        >
-        </div>
+    <section id="experiencia" class="reveal">
+      <h2 class="text-3xl font-bold text-white mb-16 flex items-center gap-4">
+        Experiencia Profesional <span class="h-px bg-white/10 flex-1"></span>
       </h2>
 
-      <div class="space-y-16">
-        <div class="relative pl-10 border-l-2 border-blue-500/30 group">
+      <div class="max-w-4xl mx-auto space-y-12">
+        <div class="relative pl-12 border-l-2 border-blue-500/30 group">
           <div
-            class="absolute w-5 h-5 bg-gray-900 border-2 border-blue-500 rounded-full -left-[11px] top-1 group-hover:scale-125 group-hover:bg-blue-500 transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+            class="absolute w-5 h-5 bg-[#0a0c10] border-2 border-blue-500 rounded-full -left-[11px] top-1 group-hover:scale-125 transition-all shadow-[0_0_15px_rgba(59,130,246,0.5)]"
           >
           </div>
-
-          <h3
-            class="text-2xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors"
-          >
-            Analista Programador
-          </h3>
-          <p class="text-blue-400 font-semibold mb-6 flex items-center gap-2">
-            <span>Sistema ERP Corporativo</span>
-            <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
-            <span class="text-gray-500 text-sm font-normal"
+          <div class="mb-2 flex flex-wrap justify-between items-center gap-4">
+            <h3
+              class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors"
+            >
+              Analista Programador
+            </h3>
+            <span
+              class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20"
               >2023 - Actualidad</span
             >
-          </p>
-
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-400 text-sm"
-          >
-            <ul class="space-y-3">
-              <li
-                class="flex items-start gap-3 hover:text-gray-200 transition-colors"
-              >
-                <span class="text-blue-500 mt-1">▹</span> Desarrollo de módulos logísticos
-                para trazabilidad de exportación internacional, desde la producción
-                de la materia prima hasta el despacho del ramo ensamblado.
-              </li>
-              <li
-                class="flex items-start gap-3 hover:text-gray-200 transition-colors"
-              >
-                <span class="text-blue-500 mt-1">▹</span> Implementación de sistemas
-                de control de calidad en tiempo real para postcosecha.
-              </li>
-            </ul>
-            <ul class="space-y-3">
-              <li
-                class="flex items-start gap-3 hover:text-gray-200 transition-colors"
-              >
-                <span class="text-blue-500 mt-1">▹</span> Modelado de bases de datos
-                escalables para registros masivos de producción diaria.
-              </li>
-              <li
-                class="flex items-start gap-3 hover:text-gray-200 transition-colors"
-              >
-                <span class="text-blue-500 mt-1">▹</span> Optimización de flujos de
-                trabajo administrativos mediante interfaces reactivas.
-              </li>
-            </ul>
           </div>
+          <p class="text-lg text-gray-300 mb-6 font-medium">
+            Sistema ERP Corporativo
+          </p>
+          <ul class="grid md:grid-cols-2 gap-4 text-gray-400 text-sm">
+            <li class="flex gap-3">
+              <span class="text-blue-500">▹</span> Desarrollo de módulos logísticos
+              para trazabilidad internacional de materia prima.
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-500">▹</span> Implementación de sistemas de control
+              de calidad en tiempo real para postcosecha.
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-500">▹</span> Modelado de BD escalables para
+              registros masivos de producción diaria.
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-500">▹</span> Optimización de flujos administrativos
+              mediante interfaces reactivas en Vue.js.
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-500">▹</span> Sistema adaptado al giro del negocio,
+              hecho a la medida y adaptado a los procesos internos, con una curva
+              de aprendizaje mínima para el equipo.
+            </li>
+          </ul>
         </div>
 
-        <div class="relative pl-10 border-l-2 border-gray-800 group">
+        <div class="relative pl-12 border-l-2 border-gray-800 group">
           <div
-            class="absolute w-5 h-5 bg-gray-900 border-2 border-gray-700 rounded-full -left-[11px] top-1 group-hover:scale-125 group-hover:border-emerald-500 transition-all"
+            class="absolute w-5 h-5 bg-[#0a0c10] border-2 border-gray-800 rounded-full -left-[11px] top-1 group-hover:border-emerald-500 transition-all"
           >
           </div>
-
-          <h3
-            class="text-2xl font-bold text-white tracking-tight group-hover:text-emerald-400 transition-colors"
-          >
-            Desarrollador de Software
-          </h3>
-          <p
-            class="text-emerald-400 font-semibold mb-6 flex items-center gap-2"
-          >
-            <span>Sistema de Gestión Farmacéutica</span>
-            <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
-            <span class="text-gray-500 text-sm font-normal">2021 - 2022</span>
-          </p>
-
-          <div class="max-w-3xl">
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-              Lideré la construcción de una plataforma centralizada para el
-              control de stock farmacéutico, enfrentando el reto de la
-              sincronización de inventarios entre múltiples puntos de venta.
-            </p>
-            <ul
-              class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-400 text-sm"
+          <div class="mb-2 flex flex-wrap justify-between items-center gap-4">
+            <h3
+              class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors"
             >
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 mt-1">▹</span> Reducción de errores
-                de inventario mediante algoritmos de validación cruzada.
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 mt-1">▹</span> Gestión automatizada
-                de bodega central y despacho a sucursales.
-              </li>
-            </ul>
+              Desarrollador de Software
+            </h3>
+            <span
+              class="px-3 py-1 bg-gray-800 text-gray-400 text-xs rounded-full"
+              >2021 - 2022</span
+            >
           </div>
+          <p class="text-lg text-gray-300 mb-6 font-medium">
+            Gestión Farmacéutica Centralizada
+          </p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4 max-w-2xl">
+            Lideré la construcción de una plataforma para el control de stock
+            farmacéutico, resolviendo la sincronización crítica de inventarios
+            entre múltiples puntos de venta y bodega central.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="tecnologias" class="reveal py-12">
-      <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 text-white">
-        Stack Tecnológico <div
-          class="h-px bg-gradient-to-r from-gray-800 to-transparent flex-1"
-        >
-        </div>
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section id="tecnologias" class="reveal">
+      <h2 class="text-3xl font-bold text-white mb-16">Stack Tecnológico</h2>
+      <div class="grid md:grid-cols-3 gap-8">
         {
           skills.map((grupo) => (
-            <div class="p-8 rounded-3xl bg-gray-800/10 border border-gray-800 hover:border-blue-500/40 hover:bg-gray-800/30 transition-all duration-300">
-              <h3 class="text-blue-400 font-bold mb-6 uppercase text-xs tracking-[0.2em]">
+            <div class="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-blue-500/40 transition-all">
+              <h3 class="text-blue-400 font-bold mb-6 uppercase text-xs tracking-widest">
                 {grupo.categoria}
               </h3>
               <div class="flex flex-wrap gap-2">
                 {grupo.tecnologias.map((tech) => (
-                  <span class="px-4 py-1.5 bg-gray-950 rounded-lg text-gray-300 text-xs border border-gray-800 hover:border-blue-500 hover:text-white hover:scale-110 transition-all cursor-default">
+                  <span class="px-4 py-2 bg-gray-950 rounded-xl text-gray-300 text-xs border border-white/5 hover:text-white transition-colors cursor-default">
                     {tech}
                   </span>
                 ))}
@@ -342,48 +315,52 @@ const skills = [
           ))
         }
       </div>
+
+      <div
+        class="mt-12 flex items-center gap-6 p-8 bg-blue-600/5 border border-blue-500/10 rounded-[2rem]"
+      >
+        <div
+          class="hidden sm:block p-4 bg-blue-500/10 rounded-2xl text-blue-400 text-3xl"
+        >
+          🏆
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-lg">Curso Avanzado de Vue.js</h4>
+          <p class="text-gray-400 text-sm mb-2">Platzi Certification • 2023</p>
+          <a
+            href="https://drive.google.com/file/d/1nUlihi9X9zlkYsolQ9LKdBEh_gQRuPTZ/view"
+            target="_blank"
+            class="text-blue-400 text-sm hover:underline font-medium"
+            >Verificar Credencial →</a
+          >
+        </div>
+      </div>
     </section>
 
     <section id="contacto" class="reveal py-20">
       <div
-        class="relative overflow-hidden bg-gradient-to-br from-blue-900/20 to-gray-900 border border-gray-800 rounded-[3rem] p-8 md:p-16"
+        class="relative bg-gradient-to-b from-grey-600 to-blue-800 rounded-[3rem] p-10 md:p-20 overflow-hidden shadow-2xl shadow-blue-500/20 text-center md:text-left"
       >
-        <div
-          class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"
-        >
-        </div>
-
-        <div class="relative z-10 grid md:grid-cols-2 gap-16 text-white">
-          <div>
-            <h2 class="text-5xl font-extrabold mb-8 tracking-tighter">
-              ¿Hablamos?
+        <div class="relative z-10 grid md:grid-cols-2 gap-16 items-center">
+          <div class="space-y-6">
+            <h2 class="text-5xl font-black text-white leading-tight">
+              ¿Quieres hablar?
             </h2>
-            <p class="text-gray-400 text-lg mb-10 leading-relaxed">
-              Estoy abierto a desafíos que requieran automatización y desarrollo
-              robusto.
-            </p>
-            <div class="space-y-6">
+            <p class="text-blue-100 text-lg opacity-90">Envíame un mensaje.</p>
+            <div class="flex flex-col gap-4">
               <a
                 href="mailto:aholiab2000castro@gmail.com"
-                class="flex items-center gap-5 text-gray-300 hover:text-blue-400 transition-all group"
+                class="flex items-center gap-4 text-white hover:translate-x-2 transition-transform"
               >
-                <div
-                  class="p-4 bg-gray-800/50 rounded-2xl group-hover:scale-110 transition-transform"
-                >
-                  📧
-                </div>
-                <span class="font-medium">aholiab2000castro@gmail.com</span>
+                <span class="bg-white/20 p-3 rounded-xl">📧</span> aholiab2000castro@gmail.com
               </a>
               <a
                 href="https://linkedin.com/in/aholiab-castro-a47251202"
-                class="flex items-center gap-5 text-gray-300 hover:text-blue-400 transition-all group"
+                target="_blank"
+                class="flex items-center gap-4 text-white hover:translate-x-2 transition-transform"
               >
-                <div
-                  class="p-4 bg-gray-800/50 rounded-2xl group-hover:scale-110 transition-transform"
-                >
-                  🔗
-                </div>
-                <span class="font-medium">LinkedIn: Aholiab Castro</span>
+                <span class="bg-white/20 p-3 rounded-xl">🔗</span> LinkedIn: Aholiab
+                Castro
               </a>
             </div>
           </div>
@@ -391,34 +368,34 @@ const skills = [
           <form
             action="https://formspree.io/f/mqeylvzl"
             method="POST"
-            class="flex flex-col gap-5"
+            class="bg-white p-8 rounded-[2rem] space-y-4 shadow-xl"
           >
             <input
               type="text"
               name="name"
               required
-              class="bg-gray-950/50 border border-gray-800 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
-              placeholder="Tu nombre"
+              placeholder="Nombre"
+              class="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 text-gray-900"
             />
             <input
               type="email"
               name="email"
               required
-              class="bg-gray-950/50 border border-gray-800 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
-              placeholder="correo@ejemplo.com"
+              placeholder="Tu correo"
+              class="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 text-gray-900"
             />
             <textarea
               name="message"
               rows="4"
               required
-              class="bg-gray-950/50 border border-gray-800 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
-              placeholder="¿En qué puedo ayudarte?"></textarea>
+              placeholder="¿En qué puedo ayudarte?"
+              class="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 text-gray-900 resize-none"
+            ></textarea>
             <button
               type="submit"
-              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] active:scale-[0.98]"
+              class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-gray-900 transition-colors"
+              >Enviar Mensaje</button
             >
-              Enviar Mensaje
-            </button>
           </form>
         </div>
       </div>
@@ -427,7 +404,7 @@ const skills = [
 </Layout>
 
 <style>
-  /* Animaciones personalizadas */
+  /* Animaciones integradas con el motor de Astro */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -439,7 +416,7 @@ const skills = [
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -449,7 +426,7 @@ const skills = [
   @keyframes fadeInDown {
     from {
       opacity: 0;
-      transform: translateY(-20px);
+      transform: translateY(-30px);
     }
     to {
       opacity: 1;
@@ -461,17 +438,16 @@ const skills = [
     animation: fadeIn 1s ease-out forwards;
   }
   .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
   .animate-fade-in-down {
-    animation: fadeInDown 0.8s ease-out forwards;
+    animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
-  /* Estilos para Reveal on Scroll */
   .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .reveal.active {
     opacity: 1;
@@ -480,44 +456,59 @@ const skills = [
 </style>
 
 <script>
-  // Lógica para Reveal on Scroll
-  const revealElements = document.querySelectorAll(".reveal");
-  const revealOnScroll = () => {
-    revealElements.forEach((el) => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 100;
-      if (elementTop < windowHeight - elementVisible) {
-        el.classList.add("active");
+  const setupAnimations = () => {
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    reveals.forEach((el) => observer.observe(el));
+  };
+
+  // Inicializar
+  setupAnimations();
+  document.addEventListener("astro:after-swap", setupAnimations);
+
+  // Lógica del Formulario
+  const setupForm = () => {
+    const form = document.querySelector("form");
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const target = e.target as HTMLFormElement;
+      const btn = target.querySelector("button");
+      if (btn) {
+        btn.disabled = true;
+        btn.innerText = "Enviando...";
+      }
+
+      try {
+        const response = await fetch(target.action, {
+          method: "POST",
+          body: new FormData(target),
+          headers: { Accept: "application/json" },
+        });
+        if (response.ok) {
+          alert("¡Mensaje recibido! Te contactaré pronto.");
+          target.reset();
+        }
+      } catch {
+        alert("Hubo un error. Por favor usa el email directo.");
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerText = "Enviar Mensaje";
+        }
       }
     });
   };
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // Ejecutar una vez al inicio
 
-  // Lógica del Formulario
-  const form = document.querySelector("form");
-  form?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const button = form.querySelector("button");
-    if (button) {
-      button.disabled = true;
-      button.innerText = "Enviando...";
-    }
-    const response = await fetch((e.target as HTMLFormElement).action, {
-      method: "POST",
-      body: new FormData(e.target as HTMLFormElement),
-      headers: { Accept: "application/json" },
-    });
-    if (response.ok) {
-      alert("¡Mensaje enviado con éxito!");
-      (e.target as HTMLFormElement).reset();
-    } else {
-      alert("Error al enviar. Intenta de nuevo.");
-    }
-    if (button) {
-      button.disabled = false;
-      button.innerText = "Enviar Mensaje";
-    }
-  });
+  setupForm();
+  document.addEventListener("astro:after-swap", setupForm);
 </script>

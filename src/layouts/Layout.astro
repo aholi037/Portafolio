@@ -1,6 +1,6 @@
 ---
-// src/layouts/Layout.astro
-import "../styles/global.css"; 
+import { ViewTransitions } from "astro:transitions";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -8,32 +8,74 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Portafolio de Haroldo Hernández - Analista Programador especializado en PHP, Laravel y Vue.js" />
     <title>Haroldo Hernández | Analista Programador</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <ViewTransitions />
   </head>
-  <body class="bg-[#0a0c10] text-gray-200 font-sans antialiased">
-    <nav class="fixed top-0 w-full bg-[#0a0c10]/80 backdrop-blur-md border-b border-gray-800/50 z-50">
-      <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="font-bold text-2xl tracking-tighter text-white hover:text-blue-400 transition-colors">
+  <body class="bg-[#0a0c10] text-gray-200 font-sans antialiased selection:bg-blue-500/30 selection:text-blue-200">
+    <nav
+      class="fixed top-0 w-full bg-[#0a0c10]/80 backdrop-blur-md border-b border-gray-800/50 z-50"
+    >
+      <div
+        class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="font-bold text-2xl tracking-tighter text-white hover:text-blue-400 transition-colors"
+        >
           <span class="text-blue-500">Haroldo</span>
         </a>
 
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400"
+        >
           <a href="#sobre-mi" class="hover:text-white transition-colors">Sobre mí</a>
           <a href="#proyectos" class="hover:text-white transition-colors">Impacto</a>
           <a href="#experiencia" class="hover:text-white transition-colors">Experiencia</a>
           <a href="#tecnologias" class="hover:text-white transition-colors">Tecnologías</a>
-          
-          <a 
-            href="#contacto" 
+
+          <a
+            href="#contacto"
             class="bg-blue-600/10 text-blue-400 border border-blue-500/20 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all shadow-lg shadow-blue-500/5"
           >
             Contáctame
           </a>
         </div>
 
-        <div class="md:hidden text-gray-400 text-xs border border-gray-800 px-2 py-1 rounded">
-          Menu
+        <button
+          id="menu-toggle"
+          aria-label="Abrir menú"
+          class="md:hidden text-gray-400 text-xs border border-gray-800 px-3 py-1 rounded hover:bg-gray-800 transition-colors"
+        >
+          Menú
+        </button>
+
+        <div
+          id="mobile-menu"
+          class="fixed inset-0 bg-[#0a0c10] z-[100] flex flex-col items-center justify-center gap-8 text-2xl font-bold text-gray-300 h-[100dvh] w-full hidden opacity-0 transition-opacity duration-300"
+        >
+          <a href="#sobre-mi" class="mobile-link hover:text-blue-400 transition-colors">Sobre mí</a>
+          <a href="#proyectos" class="mobile-link hover:text-blue-400 transition-colors">Impacto</a>
+          <a href="#experiencia" class="mobile-link hover:text-blue-400 transition-colors">Experiencia</a>
+          <a href="#tecnologias" class="mobile-link hover:text-blue-400 transition-colors">Tecnologías</a>
+
+          <a
+            href="#contacto"
+            class="mobile-link bg-blue-600 text-white px-10 py-4 rounded-xl shadow-2xl shadow-blue-500/20"
+          >
+            Contáctame
+          </a>
+
+          <button
+            id="menu-close"
+            class="mt-8 text-gray-500 text-sm uppercase tracking-widest border border-gray-800 px-4 py-2 rounded-full hover:text-white hover:border-white transition-all"
+          >
+            ✕ Cerrar
+          </button>
         </div>
       </div>
     </nav>
@@ -43,25 +85,39 @@ import "../styles/global.css";
     </div>
 
     <footer class="border-t border-gray-800/50 py-10 text-center text-gray-500 text-sm">
-      <p>© {new Date().getFullYear()} Haroldo Hernández — Analista Programador</p>
+      <p>
+        © {new Date().getFullYear()} Haroldo Hernández | Analista Programador
+      </p>
     </footer>
 
     <style is:global>
       :root {
         --accent-blue: 59, 130, 246;
       }
-      
+
       html {
-        /* FIX: Esto evita que el navbar tape los títulos al hacer scroll */
         scroll-padding-top: 100px;
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
       }
 
       body {
-        /* Fondo con un ligero gradiente para que no sea un negro plano */
-        background-image: 
-          radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.05), transparent),
-          radial-gradient(circle at 0% 100%, rgba(16, 185, 129, 0.02), transparent);
+        background-image:
+          radial-gradient(
+            circle at 50% -20%,
+            rgba(59, 130, 246, 0.05),
+            transparent
+          ),
+          radial-gradient(
+            circle at 0% 100%,
+            rgba(16, 185, 129, 0.02),
+            transparent
+          );
+      }
+
+      /* Animación de fade para el menú móvil */
+      #mobile-menu:not(.hidden) {
+        display: flex;
+        opacity: 1;
       }
 
       /* Personalización de la barra de scroll */
@@ -79,5 +135,41 @@ import "../styles/global.css";
         background: #3b82f6;
       }
     </style>
+
+    <script>
+      const setupMenu = () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
+
+        if (menuToggle && mobileMenu) {
+          const closeMenu = () => {
+            mobileMenu.classList.add("hidden");
+            document.body.style.overflow = "auto";
+          };
+
+          const openMenu = () => {
+            mobileMenu.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+          };
+
+          menuToggle.addEventListener("click", openMenu);
+          
+          if (menuClose) {
+            menuClose.addEventListener("click", closeMenu);
+          }
+
+          mobileLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+          });
+        }
+      };
+
+      // Inicializa en la primera carga
+      setupMenu();
+      // Reinicializa cuando Astro cambia de página (ViewTransitions)
+      document.addEventListener("astro:after-swap", setupMenu);
+    </script>
   </body>
 </html>
